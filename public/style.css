@@ -1,0 +1,113 @@
+body {
+  background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-top: 40px;
+}
+
+form {
+  background: #fff;
+  max-width: 350px;
+  margin: 40px auto;
+  padding: 30px 25px 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #fda085;
+  outline: none;
+}
+
+button {
+  background: linear-gradient(90deg, #f6d365 0%, #fda085 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+button:hover {
+  background: linear-gradient(90deg, #fda085 0%, #f6d365 100%);
+}
+
+p {
+  text-align: center;
+  color: #555;
+}
+a {
+  color: #fda085;
+  text-decoration: none;
+  font-weight: 500;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.dashboard {
+  max-width: 500px;
+  margin: 60px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 30px;
+  text-align: center;
+}
+.dashboard h2 {
+  color: #fda085;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.dashboard-desc {
+  color: #888;
+  margin-bottom: 24px;
+}
+
+.dashboard-actions {
+  margin-bottom: 32px;
+}
+
+.dashboard-actions button {
+  margin-right: 10px;
+}
+
+.dashboard-actions .logout-btn {
+  background: #fda085;
+}
+
+.dashboard h3 {
+  color: #fda085;
+}
+}
+.dashboard ul {
+  list-style: none;
+  padding: 0;
+}
+.dashboard li {
+  background: #f6d365;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 6px;
+  color: #333;
+}

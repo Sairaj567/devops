@@ -1,0 +1,30 @@
+<!-- public/dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="dashboard">
+    <h2>🎓 Welcome to the Dashboard!</h2>
+    <p class="dashboard-desc">Here you can see all registered students and manage your profile.</p>
+    <div class="dashboard-actions">
+      <button onclick="alert('Profile feature coming soon!')">View Profile</button>
+      <button onclick="alert('Edit feature coming soon!')">Edit Details</button>
+      <a href="/login"><button class="logout-btn">Logout</button></a>
+    </div>
+    <h3>Registered Students</h3>
+    <ul id="students-list">
+      <li>Student list will appear here after login.</li>
+    </ul>
+  </div>
+  <script>
+    // Example: fetch students from server if you expose an API
+    // For now, this is just a placeholder for interactivity
+    // You can replace this with AJAX/fetch to get real data
+    // document.getElementById('students-list').innerHTML = '<li>karuna</li><li>anotheruser</li>';
+  </script>
+</body>
+</html>
