@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Successful</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .success-icon {
+            font-size: 4em;
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+        
+        .message {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .email-confirmation {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            border-left: 4px solid #28a745;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: transform 0.2s;
+            display: inline-block;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+        
+        .event-details {
+            background: #e9ecef;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        
+        .event-details h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .event-details p {
+            margin-bottom: 10px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-icon">✅</div>
+        <h1>Registration Successful!</h1>
+        
+        <div class="message">
+            Thank you for registering for our event. Your registration has been confirmed and processed successfully.
+        </div>
+        
+        {% if email %}
+        <div class="email-confirmation">
+            <strong>Confirmation Details:</strong><br>
+            A confirmation email will be sent to: <strong>{{ email }}</strong>
+        </div>
+        {% endif %}
+        
+        <div class="event-details">
+            <h3>What's Next?</h3>
+            <p>• You will receive a confirmation email with event details</p>
+            <p>• Please keep your registration confirmation for your records</p>
+            <p>• If you have any questions, please contact our support team</p>
+            <p>• Event updates will be sent to your registered email address</p>
+        </div>
+        
+        <div class="button-group">
+            <a href="{{ url_for('index') }}" class="btn btn-primary">Register Another Person</a>
+            <a href="{{ url_for('registrations') }}" class="btn btn-secondary">View All Registrations</a>
+        </div>
+    </div>
+</body>
+</html>
